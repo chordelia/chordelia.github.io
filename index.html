@@ -2,5 +2,63 @@
 # You don't need to edit this file, it's empty on purpose.
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
+layout: default
+
+lists:
+- kids:
+  - place-in-the-choir
+
+songs:
+- name: whats-up
+  artist: 4 Non Blondes
+  title: What's Up
+  url: https://tabs.ultimate-guitar.com/0-9/4_non_blondes/whats_up_ver3_crd.htm
+- name: rolling-in-the-deep
+  artist: Adele
+  title: Rolling in the Deep
+  url: https://tabs.ultimate-guitar.com/a/adele/rolling_in_the_deep_ver5_crd.htm
+- name: sweet-pea
+  artist: Amos Lee
+  title: Sweet Pea
+  url: https://tabs.ultimate-guitar.com/a/amos_lee/sweet_pea_ver4_crd.htm
+- name: big-jet-plane
+  artist: Angus & Julia Stone
+  title: Big Jet Plane
+  url: https://tabs.ultimate-guitar.com/a/angus_julia_stone/big_jet_plane_crd.htm
+- name: place-in-the-choir
+  artist: Bill Staines
+  title: Place in the Choir
+  url: https://tabs.ultimate-guitar.com/b/bill_staines/place_in_the_choir_crd.htm
+- name: piano-man
+  artist: Billy Joel
+  title: Piano Man
+  url: https://tabs.ultimate-guitar.com/b/billy_joel/piano_man_ver5_crd_1051336id_06052011date.htm
+- name: one-red-thread
+  artist: Blind Pilot
+  title: One Red Thread
+- name: skinny-love
+  artist: Bon Iver
+  title: Skinny Love
+- name: glycerine
+  artist: Bush
+  title: Glycerine
+- name: wicked-game
+  artist: Chris Isaak
+  title: Wicked Game
 ---
+
+<table>
+<tbody>
+{% for song in page.songs %}
+  <tr>
+    <td>{{song.artist}}</td>
+    <td>
+      <a href="/songs/{{song.name}}.html">{{song.title}}</a>
+    </td>
+    <td>
+      <a href="{{song.url}}">(source)</a>
+    </td>
+  </tr>
+{% endfor %}
+</tbody>
+</table>
